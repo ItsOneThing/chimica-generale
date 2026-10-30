@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimica Generale - Indice degli Appunti</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .index-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-top: 0;
+        }
+        
+        /* GRIGLIA DELLE CARTELLE */
+        .cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        /* STILE DELLE SINGOLE CARTELLE */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 6px solid #3498db;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1em;
+            color: #7f8c8d;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Spinge il bottone in basso */
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        /* COLORI SPECIFICI PER OGNI LEZIONE */
+        .card.lez2 { border-top-color: #3498db; } /* Blu */
+        .card.lez2 .btn { background-color: #3498db; }
+        .card.lez2 .btn:hover { background-color: #2980b9; }
+
+        .card.lez3 { border-top-color: #8e44ad; } /* Viola */
+        .card.lez3 .btn { background-color: #8e44ad; }
+        .card.lez3 .btn:hover { background-color: #732d91; }
+
+        .card.lez4 { border-top-color: #e67e22; } /* Arancione */
+        .card.lez4 .btn { background-color: #e67e22; }
+        .card.lez4 .btn:hover { background-color: #d35400; }
+
+        .card.lez5 { border-top-color: #27ae60; } /* Verde */
+        .card.lez5 .btn { background-color: #27ae60; }
+        .card.lez5 .btn:hover { background-color: #1e8449; }
+
+        .card.lez6 { border-top-color: #16a085; } /* Teal */
+        .card.lez6 .btn { background-color: #16a085; }
+        .card.lez6 .btn:hover { background-color: #117a65; }
+
+        .card.lez7 { border-top-color: #c0392b; } /* Rosso */
+        .card.lez7 .btn { background-color: #c0392b; }
+        .card.lez7 .btn:hover { background-color: #922b21; }
+
+        .card.lez8 { border-top-color: #d81b60; } /* Fucsia */
+        .card.lez8 .btn { background-color: #d81b60; }
+        .card.lez8 .btn:hover { background-color: #ad1457; }
+
+        /* BOX DI AVVISO */
+        .warning {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #e74c3c;
+            background-color: #fadbd8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            border-left: 5px solid #e74c3c;
+        }
+        .warning strong { font-size: 1.1em; }
+        .warning ul { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+
+    <div class="index-container">
+        <div class="header">
+            <h1>📚 I tuoi Appunti di Chimica</h1>
+            <p class="subtitle">Corso di Chimica Generale - Politecnico di Milano</p>
+        </div>
+
+        <div class="cards-wrapper">
+            <!-- LEZIONE 2 -->
+            <!-- NOTA BENE: il percorso ora include folder/ -->
+            <a href="folder/ppt2.html" class="card lez2">
+                <h2>Lezione 2</h2>
+                <h3>Teoria Atomica della Materia</h3>
+                <p>Concetti base, elementi e composti, formule, isotopi, la mole, massa atomica, difetto di massa e introduzione al legame ionico.</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+
+            <!-- LEZIONE 3 -->
+            <a href="folder/ppt3.html" class="card lez3">
+                <h2>Lezione 3</h2>
+                <h3>Struttura Elettronica</h3>
+                <p>Equazione di Schrödinger, numeri quantici, orbitali (s, p, d, f), effetto schermo, configurazione elettronica e periodicità.</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+
+            <!-- LEZIONE 4 -->
+            <a href="folder/ppt4.html" class="card lez4">
+                <h2>Lezione 4</h2>
+                <h3>I Legami Chimici (Parte I)</h3>
+                <p>Regola dell'ottetto, legame ionico, covalente e metallico. Elettronegatività, polarità, strutture di Lewis e geometria VSEPR.</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+
+            <!-- LEZIONE 5 -->
+            <a href="folder/ppt5.html" class="card lez5">
+                <h2>Lezione 5</h2>
+                <h3>I Legami Chimici (Parte II)</h3>
+                <p>Polarità delle molecole, teoria VB, legami sigma e pi greco, ibridazione (sp3, sp2, sp), teoria degli orbitali molecolari (MO).</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+
+            <!-- LEZIONE 6 -->
+            <a href="folder/ppt6.html" class="card lez6">
+                <h2>Lezione 6</h2>
+                <h3>Forze Intermolecolari e Passaggi di Stato</h3>
+                <p>Forze di London, dipolo-dipolo, legame a idrogeno. Proprietà dei liquidi, solidi cristallini/amorfi, diagrammi di stato.</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+
+            <!-- LEZIONE 7 -->
+            <a href="folder/ppt7.html" class="card lez7">
+                <h2>Lezione 7</h2>
+                <h3>Leggi dei Gas</h3>
+                <p>Legge di Boyle, Charles, Gay-Lussac, Avogadro. Equazione di stato dei gas perfetti, legge di Dalton, teoria cinetico-molecolare.</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+
+            <!-- LEZIONE 8 -->
+            <a href="folder/ppt8.html" class="card lez8">
+                <h2>Lezione 8</h2>
+                <h3>Soluzioni e Proprietà Colligative</h3>
+                <p>Molarità, molalità, frazione molare. Entalpia di soluzione, solubilità. Legge di Raoult, innalzamento ebullioscopico, abbassamento crioscopico, pressione osmotica.</p>
+                <span class="btn">Apri Appunti &rarr;</span>
+            </a>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Promemoria per l'Esame (Cosa manca ancora):</strong>
+            <p>Questi appunti coprono quasi tutta la teoria del tuo programma. Per essere pronto al 100%, ricorda di studiare da altre fonti:</p>
+            <ul>
+                <li><strong>Stechiometria e Reazioni Chimiche:</strong> Bilanciamento, reagente limitante, calcoli di resa.</li>
+                <li><strong>Semiconduttori:</strong> Drogaggio di tipo n e p (Teoria delle bande).</li>
+                <li><strong>Esercizi Numerici:</strong> Fai tanti esercizi pratici sui gas e sulle soluzioni!</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
