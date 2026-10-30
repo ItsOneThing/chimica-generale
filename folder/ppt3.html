@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimica Generale - Struttura Elettronica (Completo)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #8e44ad;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #8e44ad;
+            margin-top: 30px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #d35400;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fcf3cf;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #d35400;
+        }
+        .box {
+            background-color: #f4ecf7;
+            border-left: 5px solid #8e44ad;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .rule-box {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .table-box {
+            background-color: #fdfefe;
+            border: 1px solid #d5dbdb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th { background-color: #f2f3f4; }
+        .trend-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .trend-col {
+            flex: 1;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .arrow-up { color: #27ae60; font-weight: bold; }
+        .arrow-down { color: #c0392b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⚛️ Sintesi per l'Esame: Struttura Elettronica</h1>
+    <p><em>Versione corretta e leggibile (senza codici matematici).</em></p>
+
+    <h2>1. L'Equazione di Schrödinger e gli Orbitali</h2>
+    <ul>
+        <li>Il modello di Bohr (orbite definite) perde di significato per il <strong>Principio di Indeterminazione</strong> di Heisenberg.</li>
+        <li><strong>Funzione d'onda (Ψ):</strong> Descrive il comportamento dell'elettrone. <strong>Ψ²</strong> rappresenta la <span class="highlight">probabilità</span> di trovare l'elettrone in una data regione di spazio.</li>
+        <li><strong>Orbitale:</strong> Regione di spazio dove è massima la probabilità di trovare l'elettrone. Non è un'orbita! È descritto da 3 numeri quantici.</li>
+    </ul>
+
+    <h2>2. I Numeri Quantici</h2>
+    <div class="box">
+        <ul>
+            <li><strong>n (Principale):</strong> n = 1, 2, 3... Definisce dimensione, distanza dal nucleo e livello energetico (guscio).</li>
+            <li><strong>l (Secondario):</strong> Va da 0 a n-1. Definisce la forma e il sottolivello (s, p, d, f).</li>
+            <li><strong>m<sub>l</sub> (Magnetico):</strong> Va da -l a +l. Definisce l'orientamento spaziale dell'orbitale.</li>
+            <li><strong>m<sub>s</sub> (Spin):</strong> ± 1/2. Riguarda lo stato dell'elettrone (rotazione oraria/antioraria), non l'orbitale.</li>
+        </ul>
+        <p><strong>Relazioni importanti:</strong> 
+            <br>- n = numero di sottolivelli nel guscio.
+            <br>- 2l + 1 = numero di orbitali nel sottolivello.
+            <br>- n² = numero totale di orbitali nel livello.
+        </p>
+    </div>
+
+    <div class="table-box">
+        <strong>Schema riassuntivo (Tabella 6.1):</strong>
+        <table>
+            <tr>
+                <th>n (Livello)</th>
+                <th>Tipo orbitali</th>
+                <th>Numero orbitali</th>
+                <th>Max e⁻</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1s</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2s, 2p</td>
+                <td>1 + 3 = 4</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3s, 3p, 3d</td>
+                <td>1 + 3 + 5 = 9</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>4s, 4p, 4d, 4f</td>
+                <td>1 + 3 + 5 + 7 = 16</td>
+                <td>32</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>3. Forma degli Orbitali e Piani Nodali</h2>
+    <ul>
+        <li><strong>Orbitali s (l = 0):</strong> Simmetria sferica. (1 orbitale).</li>
+        <li><strong>Orbitali p (l = 1):</strong> Forma bilobata. 3 orbitali orientati lungo x, y, z. Presentano un <span class="highlight">piano nodale</span> che attraversa il nucleo (probabilità zero di trovare l'elettrone lì).</li>
+        <li><strong>Orbitali d (l = 2):</strong> 5 orbitali (4 a quadrifoglio con piani nodali, 1 a "ciambella").</li>
+        <li><strong>Orbitali f (l = 3):</strong> 7 orbitali con forme complesse (max 14 e⁻).</li>
+    </ul>
+
+    <h2>4. Atomi Polielettronici: Schermo e Penetrazione</h2>
+    <ul>
+        <li>Negli atomi con più elettroni (Z > 1), l'energia dipende da <strong>n</strong> e da <strong>l</strong>. (Es: E<sub>2s</sub> < E<sub>2p</sub>).</li>
+        <li><strong>Effetto Schermo:</strong> Gli elettroni interni respingono quelli esterni, "mitigando" la carica positiva del nucleo.</li>
+        <li><strong>Carica Nucleare Efficace (Z<sub>eff</sub>):</strong> La carica positiva netta effettivamente sentita dall'elettrone. Aumenta lungo il periodo (da sx a dx) e diminuisce scendendo lungo il gruppo.</li>
+        <li><strong>Capacità penetrante:</strong> s > p > d > f. L'elettrone 2s passa più tempo vicino al nucleo del 2p, sentendo meno l'effetto schermo e avendo energia minore.</li>
+    </ul>
+
+    <h2>5. Regole di Riempimento (Configurazione Elettronica)</h2>
+    <div class="rule-box">
+        <ol>
+            <li><strong>Principio di Aufbau (e Regola della Diagonale):</strong> Gli elettroni riempiono prima gli orbitali a energia più bassa. L'ordine segue la regola della diagonale: 1s, 2s, 2p, 3s, 3p, <span class="highlight">4s, 3d</span>, 4p, 5s...</li>
+            <li><strong>Principio di Esclusione di Pauli:</strong> Due elettroni nello stesso atomo non possono avere tutti e 4 i numeri quantici uguali. Un orbitale contiene max 2 e⁻ con spin antiparalleli (↑↓).</li>
+            <li><strong>Regola di Hund:</strong> In orbitali degeneri (es. i 3 orbitali p), gli elettroni si dispongono singolarmente con spin paralleli prima di accoppiarsi.</li>
+        </ol>
+        <p><em>Eccezioni da sapere a memoria:</em> Cr (3d⁵4s¹) e Cu (3d¹⁰4s¹) sono più stabili perché hanno il sottolivello d semipieno o pieno.</p>
+    </div>
+
+    <h2>6. Le Periodicità nella Tavola Periodica</h2>
+    <p>Questo è un argomento chiave all'esame. Ecco i "trend" fondamentali:</p>
+
+    <div class="trend-container">
+        <div class="trend-col">
+            <h3>Raggio Atomico</h3>
+            <p>Lungo il periodo: <span class="arrow-down">↓ Diminuisce</span><br>(Aumenta Z<sub>eff</sub>)</p>
+            <p>Lungo il gruppo: <span class="arrow-up">↑ Aumenta</span><br>(Aumenta n)</p>
+        </div>
+        <div class="trend-col">
+            <h3>Energia di Ionizzazione (IE)</h3>
+            <p>Energia per strappare un e⁻ (A → A⁺ + e⁻)</p>
+            <p>Lungo il periodo: <span class="arrow-up">↑ Aumenta</span></p>
+            <p>Lungo il gruppo: <span class="arrow-down">↓ Diminuisce</span></p>
+        </div>
+        <div class="trend-col">
+            <h3>Affinità Elettronica</h3>
+            <p>Energia associata all'acquisizione di un e⁻</p>
+            <p>Lungo il periodo: <span class="arrow-up">↑ Aumenta</span></p>
+            <p>Lungo il gruppo: <span class="arrow-down">↓ Diminuisce</span></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>⚠️ Le eccezioni che devi sapere:</h3>
+        <ul>
+            <li><strong>Be (Z=4) vs B (Z=5):</strong> Il Berillio ha IE maggiore del Boro perché ha il sottolivello 2s pieno (maggiore stabilità).</li>
+            <li><strong>N (Z=7) vs O (Z=8):</strong> L'Azoto ha IE maggiore dell'Ossigeno perché ha i 3 orbitali p semipieni (regola di Hund -> stabilità).</li>
+        </ul>
+        <p><strong>Carattere Metallico:</strong> Diminuisce lungo il periodo (da sx a dx) e aumenta scendendo lungo il gruppo. (È inversamente proporzionale all'Energia di Ionizzazione).</p>
+        <p><strong>Ionizzazioni successive:</strong> L'energia per strappare un 2° o 3° elettrone è <span class="highlight">sempre molto maggiore</span> della prima, perché la carica positiva del nucleo (Z<sub>eff</sub>) attrae molto di più gli elettroni rimanenti.</p>
+    </div>
+
+    <h2>7. Dimensioni degli Ioni</h2>
+    <ul>
+        <li><strong>Cationi (positivi):</strong> Più piccoli dell'atomo di partenza (perdendo elettroni, la carica positiva del nucleo attrae di più gli elettroni rimasti). Es: Li⁺ < Li.</li>
+        <li><strong>Anioni (negativi):</strong> Più grandi dell'atomo di partenza (l'aggiunta di elettroni aumenta la repulsione e diminuisce l'attrazione). Es: F⁻ > F.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

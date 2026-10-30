@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimica Generale - Leggi dei Gas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #c0392b;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #a93226;
+            margin-top: 30px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #d35400;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fadbd8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #922b21;
+        }
+        .box {
+            background-color: #fdedec;
+            border-left: 5px solid #c0392b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula-box {
+            background-color: #e8f8f5;
+            border: 2px dashed #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #16a085;
+        }
+        .table-box {
+            background-color: #fdfefe;
+            border: 1px solid #d5dbdb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th { background-color: #f2f3f4; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎈 Sintesi per l'Esame: Leggi dei Gas</h1>
+    <p><em>Versione leggibile basata sulla Lezione 7. Formule, principi e conversioni fondamentali.</em></p>
+
+    <h2>1. Caratteristiche dei Gas e Pressione</h2>
+    <ul>
+        <li>Le molecole sono molto distanti tra loro: forze intermolecolari deboli, moto caotico, alta comprimibilità (non hanno volume proprio).</li>
+        <li><strong>Pressione:</strong> Dovuta agli urti delle molecole sulle pareti del recipiente. Si misura in <strong>Pascal (Pa)</strong> nel SI, ma in chimica si usano molto <strong>atm, bar, mmHg (torr)</strong>.</li>
+    </ul>
+    <div class="box">
+        <strong>Conversioni da ricordare a memoria:</strong><br>
+        - 1 atm = 1.01325 bar = 760 mmHg (torr)<br>
+        - 1 bar = 10⁵ Pa<br>
+        - 1 Pa = 1 N/m²
+    </div>
+
+    <h2>2. Temperatura</h2>
+    <p>Per le leggi dei gas si usa <strong>sempre</strong> la temperatura assoluta (Scala Kelvin).</p>
+    <div class="formula-box">
+        T(K) = t(°C) + 273.15
+    </div>
+    <p><em>Lo zero assoluto (0 K = -273.15 °C) è la temperatura teoricamente più bassa raggiungibile.</em></p>
+
+    <h2>3. Gas Ideale vs Gas Reale</h2>
+    <ul>
+        <li><strong>Gas Reale:</strong> Le molecole hanno un volume proprio e ci sono forze attrattive/repulsive tra loro.</li>
+        <li><strong>Gas Ideale:</strong> Particelle puntiformi (volume nullo), nessuna forza attrattiva/repulsiva, urti perfettamente elastici. <span class="highlight">Un gas reale si comporta come ideale ad alte temperature e basse pressioni.</span></li>
+    </ul>
+
+    <h2>4. Le 4 Leggi Fondamentali dei Gas</h2>
+
+    <h3>A. Legge di Boyle (Isoterma)</h3>
+    <p>A temperatura costante (T = cost), pressione e volume sono <strong>inversamente proporzionali</strong>.</p>
+    <div class="formula-box">P₁ × V₁ = P₂ × V₂</div>
+
+    <h3>B. Legge di Charles (Isobara)</h3>
+    <p>A pressione costante (P = cost), il volume è <strong>direttamente proporzionale</strong> alla temperatura assoluta.</p>
+    <div class="formula-box">V₁ / T₁ = V₂ / T₂</div>
+
+    <h3>C. Legge di Gay-Lussac (Isocora)</h3>
+    <p>A volume costante (V = cost), la pressione è <strong>direttamente proporzionale</strong> alla temperatura assoluta.</p>
+    <div class="formula-box">P₁ / T₁ = P₂ / T₂</div>
+
+    <h3>D. Principio di Avogadro</h3>
+    <p>Volumi uguali di gas diversi, alle stesse condizioni di T e P, contengono lo stesso numero di particelle (moli).</p>
+    <div class="formula-box">V₁ / n₁ = V₂ / n₂</div>
+    <div class="box">
+        <strong>Volume Molare (V<sub>M</sub>):</strong> A condizioni standard (STP: 0°C e 1 atm), 1 mole di qualsiasi gas occupa <span class="highlight">22.414 Litri</span>.<br>
+        Formula: V = n × V<sub>M</sub>
+    </div>
+
+    <h2>5. L'Equazione di Stato dei Gas Perfetti</h2>
+    <p>Unendo le leggi precedenti (Boyle, Charles e Avogadro) si ottiene l'equazione fondamentale:</p>
+    <div class="formula-box" style="font-size: 1.5em; border-color: #c0392b; color: #c0392b;">
+        P × V = n × R × T
+    </div>
+    <ul>
+        <li>P = pressione (in atm)</li>
+        <li>V = volume (in Litri)</li>
+        <li>n = numero di moli</li>
+        <li>T = temperatura (in Kelvin)</li>
+        <li>R = costante universale dei gas</li>
+    </ul>
+    <div class="table-box">
+        <strong>I valori di R da ricordare:</strong>
+        <table>
+            <tr>
+                <th>Unità di P e V</th>
+                <th>Valore di R</th>
+            </tr>
+            <tr>
+                <td>P in atm, V in L</td>
+                <td>0.0821 L·atm/(mol·K)</td>
+            </tr>
+            <tr>
+                <td>P in Pascal, V in m³</td>
+                <td>8.314 J/(mol·K)</td>
+            </tr>
+        </table>
+    </div>
+    <p><em>Se il gas subisce una trasformazione con n costante:</em></p>
+    <div class="formula-box">(P₁ × V₁) / T₁ = (P₂ × V₂) / T₂</div>
+
+    <h2>6. Miscele Gassose: Legge di Dalton</h2>
+    <p>La pressione totale di una miscela di gas che non reagiscono è la somma delle pressioni parziali dei singoli gas.</p>
+    <div class="formula-box">P<sub>totale</sub> = P<sub>A</sub> + P<sub>B</sub> + P<sub>C</sub> ...</div>
+    <p>La pressione parziale di un gas si calcola moltiplicando la pressione totale per la sua <strong>frazione molare (x)</strong>:</p>
+    <div class="formula-box">
+        P<sub>i</sub> = x<sub>i</sub> × P<sub>totale</sub><br><br>
+        dove x<sub>i</sub> = n<sub>i</sub> / n<sub>totale</sub>
+    </div>
+
+    <h2>7. Teoria Cinetico-Molecolare</h2>
+    <ul>
+        <li>La pressione è dovuta agli urti delle particelle sulle pareti.</li>
+        <li>La <strong>temperatura</strong> è una misura dell'<strong>energia cinetica media</strong> delle particelle.</li>
+        <li>A parità di temperatura, le molecole più pesanti (maggiore massa molare) si muovono più lentamente di quelle leggere.</li>
+    </ul>
+
+    <h2>8. Scostamento dal Comportamento Ideale</h2>
+    <p>I gas reali si allontanano dal comportamento ideale (il rapporto PV/nRT non è esattamente 1) quando:</p>
+    <ul>
+        <li>La pressione è <strong>molto alta</strong> (le molecole sono troppo vicine, il loro volume diventa importante).</li>
+        <li>La temperatura è <strong>molto bassa</strong> (le forze attrattive tra le molecole diventano rilevanti, avvicinandosi alla liquefazione).</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
