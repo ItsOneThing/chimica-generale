@@ -1,122 +1,102 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-hue="pink">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chimica Generale - Soluzioni e Proprietà Colligative</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #8e44ad;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #6c3483;
-            margin-top: 30px;
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #d35400;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .highlight {
-            background-color: #ebdef0;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-weight: bold;
-            color: #6c3483;
-        }
-        .box {
-            background-color: #f4ecf7;
-            border-left: 5px solid #8e44ad;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .formula-box {
-            background-color: #e8f8f5;
-            border: 2px dashed #1abc9c;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #16a085;
-        }
-        .table-box {
-            background-color: #fdfefe;
-            border: 1px solid #d5dbdb;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th { background-color: #f2f3f4; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chimica Generale - Soluzioni e Proprietà Colligative</title>
+  <meta name="theme-color" content="#f6f8fa">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("chimica-tema");
+      } catch (error) {
+        savedTheme = null;
+      }
+      var theme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="lesson">
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
 
-<div class="container">
-    <h1>🧪 Sintesi per l'Esame: Soluzioni e Proprietà Colligative</h1>
-    <p><em>Versione leggibile basata sulla Lezione 8. Concentrazioni, Entalpia, Solubilità e Proprietà Colligative.</em></p>
+  <div class="progress" aria-hidden="true">
+    <span class="progress__bar" data-progress></span>
+  </div>
 
-    <h2>1. Le Soluzioni: Concetti Base</h2>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 3h6M10 3v5.2L4.8 18a2.4 2.4 0 0 0 2.1 3.6h10.2a2.4 2.4 0 0 0 2.1-3.6L14 8.2V3"/>
+          <path d="M7.2 14h9.6"/>
+        </svg>
+        <span class="brand__text">
+          <strong>Chimica Generale</strong>
+          <span>Appunti d'esame</span>
+        </span>
+      </a>
+
+      <nav class="breadcrumb" aria-label="Percorso di navigazione">
+        <a href="../index.html">Indice</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span aria-current="page">Lezione 8</span>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Passa al tema scuro" hidden>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenuto" class="page">
+    <article class="article">
+      <header class="hero"><h1>🧪 Sintesi per l'Esame: Soluzioni e Proprietà Colligative</h1><p class="hero__lede"><em>Versione leggibile basata sulla Lezione 8. Concentrazioni, Entalpia, Solubilità e Proprietà Colligative.</em></p></header>
+
+      <nav class="toc" data-toc aria-label="Indice della lezione">
+        <p class="toc__title">In questa lezione</p>
+        <ol class="toc__list">
+          <li><a href="#sez-1">1. Le Soluzioni: Concetti Base</a></li>
+          <li><a href="#sez-2">2. Modi per Esprimere la Concentrazione</a></li>
+          <li><a href="#sez-3">3. Entalpia di Soluzione (ΔH)</a></li>
+          <li><a href="#sez-4">4. Solubilità e Soluzioni Sature</a></li>
+          <li><a href="#sez-5">5. Le Proprietà Colligative</a></li>
+          <li><a href="#sez-6">6. Applicazioni Pratiche delle Proprietà Colligative</a></li>
+        </ol>
+      </nav>
+
+      <section id="sez-1"><h2>1. Le Soluzioni: Concetti Base</h2>
     <ul>
         <li><strong>Soluzione:</strong> Miscela omogenea di due o più sostanze in un'unica fase.</li>
         <li><strong>Solvente:</strong> Il componente in maggiore quantità (di solito acqua).</li>
         <li><strong>Soluto:</strong> Gli altri componenti disciolti.</li>
-        <li><strong>Regola d'oro:</strong> <span class="highlight">"Il simile scioglie il simile"</span>. Soluti polari si sciolgono in solventi polari, soluti apolari in solventi apolari.</li>
+        <li><strong>Regola d'oro:</strong> <mark>"Il simile scioglie il simile"</mark>. Soluti polari si sciolgono in solventi polari, soluti apolari in solventi apolari.</li>
         <li><strong>Idrofilo:</strong> Sostanza che scioglie bene in acqua. <strong>Lipofilo:</strong> Sostanza che scioglie bene in solventi organici (apolari).</li>
         <li><strong>Tensioattivi:</strong> Sostanze (come i saponi) che hanno una parte idrofila e una lipofila. Formano le <strong>micelle</strong>, permettendo di sciogliere sporco grasso (apolare) in acqua.</li>
     </ul>
 
-    <h2>2. Modi per Esprimere la Concentrazione</h2>
+    </section><section id="sez-2"><h2>2. Modi per Esprimere la Concentrazione</h2>
     
     <h3>A. Molarità (M)</h3>
     <p>Numero di moli di soluto in 1 Litro di soluzione.</p>
-    <div class="formula-box">M = n (mol) / V (L)</div>
+    <div class="formula formula--accent">M = n (mol) / V (L)</div>
 
     <h3>B. Molalità (m)</h3>
     <p>Numero di moli di soluto in 1 <strong>Kg di solvente</strong> (non soluzione!).</p>
-    <div class="formula-box">m = n (mol) / massa<sub>solvente</sub> (kg)</div>
+    <div class="formula formula--accent">m = n (mol) / massa<sub>solvente</sub> (kg)</div>
 
     <h3>C. Frazione Molare (χ)</h3>
     <p>Rapporto tra le moli di una sostanza e le moli totali.</p>
-    <div class="formula-box">χ<sub>soluto</sub> = n<sub>soluto</sub> / (n<sub>soluto</sub> + n<sub>solvente</sub>)</div>
+    <div class="formula formula--accent">χ<sub>soluto</sub> = n<sub>soluto</sub> / (n<sub>soluto</sub> + n<sub>solvente</sub>)</div>
 
     <h3>D. Percentuali</h3>
     <ul>
@@ -125,51 +105,51 @@
         <li><strong>% V/V (volume/volume):</strong> mL di soluto in 100 mL di soluzione (usato per liquidi, es. gradi alcolici).</li>
     </ul>
 
-    <div class="box">
+    <div class="callout">
         <strong>Concentrazioni bassissime:</strong><br>
         - <strong>ppm</strong> (parti per milione): mg/L o µg/g<br>
         - <strong>ppb</strong> (parti per miliardo): µg/L o ng/g<br>
         - <strong>ppt</strong> (parti per trilione): ng/L o pg/g
     </div>
 
-    <h2>3. Entalpia di Soluzione (ΔH)</h2>
+    </section><section id="sez-3"><h2>3. Entalpia di Soluzione (ΔH)</h2>
     <p>Sciogliere una sostanza può assorbire o rilasciare calore.</p>
     <ul>
-        <li><strong>Processo Esotermico (ΔH < 0):</strong> Rilascia calore, la soluzione si scalda. <em>Es. CaCl<sub>2</sub> (usato nelle bevande "auto-riscaldanti").</em></li>
-        <li><strong>Processo Endotermico (ΔH > 0):</strong> Assorbe calore, la soluzione si raffredda. <em>Es. NH<sub>4</sub>NO<sub>3</sub> (usato nei ghiacci istantanei).</em></li>
+        <li><strong>Processo Esotermico (ΔH &lt; 0):</strong> Rilascia calore, la soluzione si scalda. <em>Es. CaCl<sub>2</sub> (usato nelle bevande "auto-riscaldanti").</em></li>
+        <li><strong>Processo Endotermico (ΔH &gt; 0):</strong> Assorbe calore, la soluzione si raffredda. <em>Es. NH<sub>4</sub>NO<sub>3</sub> (usato nei ghiacci istantanei).</em></li>
     </ul>
     <p><em>Nota:</em> Non tutte le sostanze diventano più solubili scaldando la soluzione!</p>
 
-    <h2>4. Solubilità e Soluzioni Sature</h2>
+    </section><section id="sez-4"><h2>4. Solubilità e Soluzioni Sature</h2>
     <ul>
         <li><strong>Soluzione Satura:</strong> Contiene la massima quantità possibile di soluto disciolto a una certa temperatura. L'eventuale soluto in eccesso non sciolto si chiama <strong>corpo di fondo</strong> (si crea un equilibrio).</li>
         <li><strong>Solubilità dei Gas nei Liquidi (Legge di Henry):</strong> La solubilità di un gas aumenta all'aumentare della pressione parziale del gas.</li>
     </ul>
-    <div class="formula-box">S<sub>g</sub> = k<sub>H</sub> × P<sub>g</sub></div>
+    <div class="formula formula--accent">S<sub>g</sub> = k<sub>H</sub> × P<sub>g</sub></div>
     <p><em>Effetto della Temperatura:</em> Per i gas, la solubilità <strong>diminuisce</strong> all'aumentare della temperatura. Per i solidi (in genere), la solubilità <strong>aumenta</strong> all'aumentare della temperatura.</p>
 
-    <h2>5. Le Proprietà Colligative</h2>
-    <p>Sono proprietà che dipendono <span class="highlight">solo dal numero di particelle di soluto</span> presenti in soluzione, e non dal tipo di soluto. Sono 4.</p>
+    </section><section id="sez-5"><h2>5. Le Proprietà Colligative</h2>
+    <p>Sono proprietà che dipendono <mark>solo dal numero di particelle di soluto</mark> presenti in soluzione, e non dal tipo di soluto. Sono 4.</p>
 
     <h3>A. Abbassamento della Tensione di Vapore (Legge di Raoult)</h3>
     <p>L'aggiunta di un soluto non volatile abbassa la pressione di vapore del solvente.</p>
-    <div class="formula-box">P<sub>soluzione</sub> = χ<sub>solvente</sub> × P°<sub>solvente</sub></div>
+    <div class="formula formula--accent">P<sub>soluzione</sub> = χ<sub>solvente</sub> × P°<sub>solvente</sub></div>
     <p>Dove P° è la tensione di vapore del solvente puro e χ è la frazione molare del solvente.</p>
 
     <h3>B. Innalzamento Ebullioscopico (Punto di Ebollizione)</h3>
     <p>La soluzione bolle a una temperatura più alta del solvente puro.</p>
-    <div class="formula-box">ΔT<sub>eb</sub> = K<sub>eb</sub> × m × i</div>
+    <div class="formula formula--accent">ΔT<sub>eb</sub> = K<sub>eb</sub> × m × i</div>
 
     <h3>C. Abbassamento Crioscopico (Punto di Fusione/Congelamento)</h3>
     <p>La soluzione congela a una temperatura più bassa del solvente puro. Usato per il sale sulle strade o il glicole nel radiatore.</p>
-    <div class="formula-box">ΔT<sub>cr</sub> = K<sub>cr</sub> × m × i</div>
+    <div class="formula formula--accent">ΔT<sub>cr</sub> = K<sub>cr</sub> × m × i</div>
 
     <h3>D. Pressione Osmotica (π)</h3>
     <p>Pressione necessaria per fermare il passaggio di solvente attraverso una membrana semipermeabile (osmosi) da una soluzione meno concentrata a una più concentrata.</p>
-    <div class="formula-box">π = M × R × T × i</div>
+    <div class="formula formula--accent">π = M × R × T × i</div>
     <p><em>(Qui si usa la Molarità M, non la molalità m).</em></p>
 
-    <div class="box">
+    <div class="callout">
         <h3>⚠️ Il Coefficiente di Van't Hoff (i)</h3>
         <p>I soluti come i sali (elettroliti) si dissociano in ioni in soluzione, aumentando il numero di particelle. Il fattore <strong>i</strong> corregge i calcoli:</p>
         <ul>
@@ -179,7 +159,7 @@
         </ul>
     </div>
 
-    <h2>6. Applicazioni Pratiche delle Proprietà Colligative</h2>
+    </section><section id="sez-6"><h2>6. Applicazioni Pratiche delle Proprietà Colligative</h2>
     <ul>
         <li><strong>Sale sulle strade d'inverno:</strong> Abbassa il punto di congelamento dell'acqua (abbassamento crioscopico).</li>
         <li><strong>Anticongelante per auto:</strong> Glicole etilenico per abbassare il punto di congelamento e alzare quello di ebollizione.</li>
@@ -187,7 +167,32 @@
         <li><strong>Osmosi inversa:</strong> Si applica una pressione superiore alla pressione osmotica per spingere il solvente dalla soluzione concentrata a quella pura (usata per desalinizzare l'acqua di mare).</li>
     </ul>
 
-</div>
+</section>
 
+      <nav class="pager" aria-label="Navigazione tra le lezioni">
+        <a class="pager__link" href="ppt7.html">
+          <span class="pager__label">← Lezione precedente</span>
+          <span class="pager__title">Leggi dei Gas</span>
+        </a>
+        <a class="pager__link pager__link--next" href="../nomenclatura.html">
+          <span class="pager__label">Esercizi →</span>
+          <span class="pager__title">Esercizio di Nomenclatura</span>
+        </a>
+      </nav>
+
+      <footer class="site-footer">
+        <p>Chimica Generale</p>
+        <p><a href="../index.html">Torna all'indice</a></p>
+      </footer>
+    </article>
+  </main>
+
+  <button class="to-top" type="button" data-to-top aria-label="Torna all'inizio della pagina">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../assets/js/ui.js"></script>
 </body>
 </html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="it" data-hue="teal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercizio di Nomenclatura Chimica</title>
+  <meta name="theme-color" content="#f6f8fa">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("chimica-tema");
+      } catch (error) {
+        savedTheme = null;
+      }
+      var theme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="exercise-page">
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+
+  <div class="progress" aria-hidden="true">
+    <span class="progress__bar" data-progress></span>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 3h6M10 3v5.2L4.8 18a2.4 2.4 0 0 0 2.1 3.6h10.2a2.4 2.4 0 0 0 2.1-3.6L14 8.2V3"/>
+          <path d="M7.2 14h9.6"/>
+        </svg>
+        <span class="brand__text">
+          <strong>Chimica Generale</strong>
+          <span>Appunti d'esame</span>
+        </span>
+      </a>
+
+      <nav class="breadcrumb" aria-label="Percorso di navigazione">
+        <a href="index.html">Indice</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span aria-current="page">Nomenclatura</span>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Passa al tema scuro" hidden>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenuto" class="page">
+    <div class="exercise" id="exercise-container">
+      <header class="hero">
+        <h1>📝 Esercizio di Nomenclatura</h1>
+        <aside class="callout">
+          <strong>Istruzioni:</strong><br>
+        1. Leggi la formula chimica a sinistra.<br>
+        2. Nel primo campetto scrivi il <strong>nome tradizionale</strong>.<br>
+        3. Nel secondo campetto scrivi il <strong>nome IUPAC</strong>.<br>
+        4. Clicca il pulsante in basso per controllare le soluzioni!
+        </aside>
+      </header>
+
+      <nav class="toc" data-toc aria-label="Indice dell'esercizio">
+        <p class="toc__title">In questo esercizio</p>
+        <ol class="toc__list">
+          <li><a href="#ex-sez-1">1. Ossidi e Anidridi</a></li>
+          <li><a href="#ex-sez-2">2. Perossidi e Superossidi</a></li>
+          <li><a href="#ex-sez-3">3. Idruri e Idracidi</a></li>
+          <li><a href="#ex-sez-4">4. Sali Binari</a></li>
+          <li><a href="#ex-sez-5">5. Idrossidi</a></li>
+          <li><a href="#ex-sez-6">6. Ossiacidi</a></li>
+          <li><a href="#ex-sez-7">7. Sali Ternari e Sali Acidi</a></li>
+        </ol>
+      </nav>
+
+      <section class="ex-section" id="ex-sez-1">
+        <h2>1. Ossidi e Anidridi</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">Na<sub>2</sub>O</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Na2O">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Na2O">
+            </div>
+            <div class="ex-item__answer">Ossido di sodio / Monossido di disodio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Al<sub>2</sub>O<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Al2O3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Al2O3">
+            </div>
+            <div class="ex-item__answer">Ossido di alluminio / Triossido di dialluminio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CaO</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CaO">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CaO">
+            </div>
+            <div class="ex-item__answer">Ossido di calcio / Monossido di calcio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">FeO</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per FeO">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per FeO">
+            </div>
+            <div class="ex-item__answer">Ossido ferroso / Ossido di ferro(II) o Monossido di ferro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Fe<sub>2</sub>O<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Fe2O3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Fe2O3">
+            </div>
+            <div class="ex-item__answer">Ossido ferrico / Ossido di ferro(III) o Triossido di diferro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">B<sub>2</sub>O<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per B2O3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per B2O3">
+            </div>
+            <div class="ex-item__answer">Anidride borica / Triossido di diboro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">SO<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per SO2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per SO2">
+            </div>
+            <div class="ex-item__answer">Anidride solforosa / Diossido di zolfo</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">SO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per SO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per SO3">
+            </div>
+            <div class="ex-item__answer">Anidride solforica / Triossido di zolfo</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Cl<sub>2</sub>O</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Cl2O">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Cl2O">
+            </div>
+            <div class="ex-item__answer">Anidride ipoclorosa / Monossido di dicloro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Cl<sub>2</sub>O<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Cl2O3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Cl2O3">
+            </div>
+            <div class="ex-item__answer">Anidride clorosa / Triossido di dicloro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Cl<sub>2</sub>O<sub>5</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Cl2O5">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Cl2O5">
+            </div>
+            <div class="ex-item__answer">Anidride clorica / Pentaossido di dicloro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Cl<sub>2</sub>O<sub>7</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Cl2O7">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Cl2O7">
+            </div>
+            <div class="ex-item__answer">Anidride perclorica / Eptaossido di dicloro</div>
+          </li>
+        </ul>
+      </section>
+      <section class="ex-section" id="ex-sez-2">
+        <h2>2. Perossidi e Superossidi</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">H<sub>2</sub>O<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per H2O2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per H2O2">
+            </div>
+            <div class="ex-item__answer">Perossido di idrogeno (Acqua ossigenata) / Perossido di idrogeno</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Na<sub>2</sub>O<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Na2O2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Na2O2">
+            </div>
+            <div class="ex-item__answer">Perossido di sodio / Perossido di disodio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CaO<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CaO2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CaO2">
+            </div>
+            <div class="ex-item__answer">Perossido di calcio / Perossido di calcio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CsO<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CsO2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CsO2">
+            </div>
+            <div class="ex-item__answer">Superossido di cesio / Superossido di cesio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">KO<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per KO2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per KO2">
+            </div>
+            <div class="ex-item__answer">Superossido di potassio / Superossido di potassio</div>
+          </li>
+        </ul>
+      </section>
+      <section class="ex-section" id="ex-sez-3">
+        <h2>3. Idruri e Idracidi</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">LiH</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per LiH">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per LiH">
+            </div>
+            <div class="ex-item__answer">Idruro di litio / Idruro di litio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">BaH<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per BaH2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per BaH2">
+            </div>
+            <div class="ex-item__answer">Idruro di bario / Diidruro di bario</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">AlH<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per AlH3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per AlH3">
+            </div>
+            <div class="ex-item__answer">Idruro di alluminio / Triidruro di alluminio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CH<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CH4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CH4">
+            </div>
+            <div class="ex-item__answer">Metano / Tetraidruro di carbonio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">NH<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per NH3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per NH3">
+            </div>
+            <div class="ex-item__answer">Ammoniaca / Triidruro di azoto</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HCl</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HCl">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HCl">
+            </div>
+            <div class="ex-item__answer">Acido cloridrico / Cloruro di idrogeno</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">H<sub>2</sub>S</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per H2S">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per H2S">
+            </div>
+            <div class="ex-item__answer">Acido solfidrico / Solfuro di diidrogeno</div>
+          </li>
+        </ul>
+      </section>
+      <section class="ex-section" id="ex-sez-4">
+        <h2>4. Sali Binari</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">NaCl</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per NaCl">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per NaCl">
+            </div>
+            <div class="ex-item__answer">Cloruro di sodio / Monocloruro di sodio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CaCl<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CaCl2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CaCl2">
+            </div>
+            <div class="ex-item__answer">Cloruro di calcio / Dicloruro di calcio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CuCl</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CuCl">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CuCl">
+            </div>
+            <div class="ex-item__answer">Cloruro rameoso / Monocloruro di rame</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CuCl<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CuCl2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CuCl2">
+            </div>
+            <div class="ex-item__answer">Cloruro rameico / Dicloruro di rame</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Al<sub>2</sub>S<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Al2S3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Al2S3">
+            </div>
+            <div class="ex-item__answer">Solfuro di alluminio / Trisolfuro di dialluminio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">K<sub>2</sub>S</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per K2S">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per K2S">
+            </div>
+            <div class="ex-item__answer">Solfuro di potassio / Monosolfuro di dipotassio</div>
+          </li>
+        </ul>
+      </section>
+      <section class="ex-section" id="ex-sez-5">
+        <h2>5. Idrossidi</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">NaOH</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per NaOH">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per NaOH">
+            </div>
+            <div class="ex-item__answer">Idrossido di sodio / Monoidrossido di sodio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Ca(OH)<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Ca(OH)2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Ca(OH)2">
+            </div>
+            <div class="ex-item__answer">Idrossido di calcio / Diidrossido di calcio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Al(OH)<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Al(OH)3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Al(OH)3">
+            </div>
+            <div class="ex-item__answer">Idrossido di alluminio / Triidrossido di alluminio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Fe(OH)<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Fe(OH)2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Fe(OH)2">
+            </div>
+            <div class="ex-item__answer">Idrossido ferroso / Diidrossido di ferro</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Fe(OH)<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Fe(OH)3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Fe(OH)3">
+            </div>
+            <div class="ex-item__answer">Idrossido ferrico / Triidrossido di ferro</div>
+          </li>
+        </ul>
+      </section>
+      <section class="ex-section" id="ex-sez-6">
+        <h2>6. Ossiacidi</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">H<sub>2</sub>CO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per H2CO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per H2CO3">
+            </div>
+            <div class="ex-item__answer">Acido carbonico / Acido triossocarbonico</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HNO<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HNO2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HNO2">
+            </div>
+            <div class="ex-item__answer">Acido nitroso / Acido diossonitrico(III)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HNO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HNO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HNO3">
+            </div>
+            <div class="ex-item__answer">Acido nitrico / Acido triossonitrico(V)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">H<sub>2</sub>SO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per H2SO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per H2SO3">
+            </div>
+            <div class="ex-item__answer">Acido solforoso / Acido triossosolforico(IV)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">H<sub>2</sub>SO<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per H2SO4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per H2SO4">
+            </div>
+            <div class="ex-item__answer">Acido solforico / Acido tetraossosolforico(VI)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">H<sub>3</sub>PO<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per H3PO4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per H3PO4">
+            </div>
+            <div class="ex-item__answer">Acido (orto)fosforico / Acido tetraossofosforico(V)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HClO</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HClO">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HClO">
+            </div>
+            <div class="ex-item__answer">Acido ipocloroso / Acido monossoclorico(I)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HClO<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HClO2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HClO2">
+            </div>
+            <div class="ex-item__answer">Acido cloroso / Acido diossoclorico(III)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HClO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HClO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HClO3">
+            </div>
+            <div class="ex-item__answer">Acido clorico / Acido triossoclorico(V)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">HClO<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per HClO4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per HClO4">
+            </div>
+            <div class="ex-item__answer">Acido perclorico / Acido tetraossoclorico(VII)</div>
+          </li>
+        </ul>
+      </section>
+      <section class="ex-section" id="ex-sez-7">
+        <h2>7. Sali Ternari e Sali Acidi</h2>
+        <ul class="ex-list">
+          <li class="ex-item">
+            <div class="ex-item__formula">FeCO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per FeCO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per FeCO3">
+            </div>
+            <div class="ex-item__answer">Carbonato ferroso / Triossocarbonato di ferro(II)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Fe<sub>2</sub>(CO<sub>3</sub>)<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Fe2(CO3)3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Fe2(CO3)3">
+            </div>
+            <div class="ex-item__answer">Carbonato ferrico / Triossocarbonato di diferro(III)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CuSO<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CuSO4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CuSO4">
+            </div>
+            <div class="ex-item__answer">Solfato rameico / Tetraossosolfato(VI) di rame(II)</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Na<sub>2</sub>SO<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Na2SO4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Na2SO4">
+            </div>
+            <div class="ex-item__answer">Solfato di sodio / Tetraossosolfato(VI) di disodio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">CaCO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per CaCO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per CaCO3">
+            </div>
+            <div class="ex-item__answer">Carbonato di calcio / Triossocarbonato di calcio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">KClO</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per KClO">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per KClO">
+            </div>
+            <div class="ex-item__answer">Ipoclorito di potassio / Monossoclorato(I) di potassio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">KClO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per KClO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per KClO3">
+            </div>
+            <div class="ex-item__answer">Clorato di potassio / Triossoclorato(V) di potassio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">KClO<sub>4</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per KClO4">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per KClO4">
+            </div>
+            <div class="ex-item__answer">Perclorato di potassio / Tetraossoclorato(VII) di potassio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">NaHCO<sub>3</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per NaHCO3">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per NaHCO3">
+            </div>
+            <div class="ex-item__answer">Bicarbonato di sodio / Idrogenotriossocarbonato di sodio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">Ca(HCO<sub>3</sub>)<sub>2</sub></div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per Ca(HCO3)2">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per Ca(HCO3)2">
+            </div>
+            <div class="ex-item__answer">Bicarbonato di calcio / Diidrogenotriossocarbonato di calcio</div>
+          </li>
+          <li class="ex-item">
+            <div class="ex-item__formula">KHS</div>
+            <div class="ex-item__fields">
+              <input class="field__input" type="text" placeholder="Tradizionale" aria-label="Nome tradizionale per KHS">
+              <input class="field__input" type="text" placeholder="IUPAC" aria-label="Nome IUPAC per KHS">
+            </div>
+            <div class="ex-item__answer">Solfuro acido di potassio (o Idrogenosolfuro di potassio) / Idrogenosolfuro di potassio</div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="ex-bar">
+        <button class="btn btn--primary" type="button" id="toggle-answers" aria-pressed="false">Mostra / Nascondi Soluzioni</button>
+      </div>
+
+      <footer class="site-footer">
+        <p>Chimica Generale</p>
+        <p><a href="index.html">Torna all'indice</a></p>
+      </footer>
+    </div>
+  </main>
+
+  <button class="to-top" type="button" data-to-top aria-label="Torna all'inizio della pagina">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/nomenclatura.js"></script>
+</body>
+</html>

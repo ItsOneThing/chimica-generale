@@ -1,102 +1,86 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-hue="green">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chimica Generale - I Legami Chimici (Parte II)</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #16a085;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #1e8449;
-            margin-top: 30px;
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #d35400;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .highlight {
-            background-color: #d5f5e3;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-weight: bold;
-            color: #145a32;
-        }
-        .box {
-            background-color: #e9f7ef;
-            border-left: 5px solid #27ae60;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .rule-box {
-            background-color: #fdf2e9;
-            border-left: 5px solid #e67e22;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .table-box {
-            background-color: #fdfefe;
-            border: 1px solid #d5dbdb;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th { background-color: #f2f3f4; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chimica Generale - I Legami Chimici (Parte II)</title>
+  <meta name="theme-color" content="#f6f8fa">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("chimica-tema");
+      } catch (error) {
+        savedTheme = null;
+      }
+      var theme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="lesson">
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
 
-<div class="container">
-    <h1>🔗 Sintesi per l'Esame: I Legami Chimici (Parte II)</h1>
-    <p><em>Versione leggibile basata sulla Lezione 5. Polarità, Ibridazione e Orbitali Molecolari.</em></p>
+  <div class="progress" aria-hidden="true">
+    <span class="progress__bar" data-progress></span>
+  </div>
 
-    <h2>1. Polarità delle Molecole e Dipoli</h2>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 3h6M10 3v5.2L4.8 18a2.4 2.4 0 0 0 2.1 3.6h10.2a2.4 2.4 0 0 0 2.1-3.6L14 8.2V3"/>
+          <path d="M7.2 14h9.6"/>
+        </svg>
+        <span class="brand__text">
+          <strong>Chimica Generale</strong>
+          <span>Appunti d'esame</span>
+        </span>
+      </a>
+
+      <nav class="breadcrumb" aria-label="Percorso di navigazione">
+        <a href="../index.html">Indice</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span aria-current="page">Lezione 5</span>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Passa al tema scuro" hidden>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenuto" class="page">
+    <article class="article">
+      <header class="hero"><h1>🔗 Sintesi per l'Esame: I Legami Chimici (Parte II)</h1><p class="hero__lede"><em>Versione leggibile basata sulla Lezione 5. Polarità, Ibridazione e Orbitali Molecolari.</em></p></header>
+
+      <nav class="toc" data-toc aria-label="Indice della lezione">
+        <p class="toc__title">In questa lezione</p>
+        <ol class="toc__list">
+          <li><a href="#sez-1">1. Polarità delle Molecole e Dipoli</a></li>
+          <li><a href="#sez-2">2. Teoria del Legame di Valenza (VB)</a></li>
+          <li><a href="#sez-3">3. L&#x27;Ibridazione degli Orbitali</a></li>
+          <li><a href="#sez-4">4. Teoria degli Orbitali Molecolari (MO)</a></li>
+          <li><a href="#sez-5">5. Il Paramagnetismo dell&#x27;Ossigeno (O₂)</a></li>
+          <li><a href="#sez-6">6. Il Legame Metallico secondo la Teoria MO</a></li>
+        </ol>
+      </nav>
+
+      <section id="sez-1"><h2>1. Polarità delle Molecole e Dipoli</h2>
     <ul>
         <li>Un legame covalente tra atomi con diversa elettronegatività è <strong>polare</strong> (parziale separazione di carica δ⁺ e δ⁻).</li>
         <li>La molecola acquisisce un <strong>momento dipolare</strong> (un vettore diretto verso l'atomo più elettronegativo). L'unità di misura è il Debye (D).</li>
-        <li><strong>Regola d'oro:</strong> La polarità di una molecola è la <span class="highlight">somma vettoriale</span> di tutti i dipoli dei singoli legami. Dipende quindi dalla <strong>geometria molecolare</strong> (VSEPR).</li>
+        <li><strong>Regola d'oro:</strong> La polarità di una molecola è la <mark>somma vettoriale</mark> di tutti i dipoli dei singoli legami. Dipende quindi dalla <strong>geometria molecolare</strong> (VSEPR).</li>
     </ul>
-    <div class="box">
+    <div class="callout">
         <strong>Esempi fondamentali:</strong>
         <ul>
             <li><strong>CO₂ (Lineare):</strong> I due dipoli C=O puntano in direzioni opposte e si annullano. Molecola <strong>APOLARE</strong>.</li>
@@ -106,13 +90,13 @@
         </ul>
     </div>
 
-    <h2>2. Teoria del Legame di Valenza (VB)</h2>
+    </section><section id="sez-2"><h2>2. Teoria del Legame di Valenza (VB)</h2>
     <p>Si basa sulla sovrapposizione degli orbitali atomici. Quando due atomi si avvicinano, i loro orbitali si sovrappongono e gli elettroni vengono condivisi.</p>
     <ul>
         <li><strong>Legame σ (Sigma):</strong> Sovrapposizione frontale (lungo l'asse internucleare). È il legame più forte. <em>Può essere polare o apolare. Permette la rotazione.</em></li>
         <li><strong>Legame π (Pi greco):</strong> Sovrapposizione laterale (sopra e sotto l'asse internucleare). È più debole del legame σ. <em>Impedisce la rotazione.</em></li>
     </ul>
-    <div class="rule-box">
+    <div class="callout callout--tip">
         <strong>Composizione dei legami multipli:</strong>
         <ul>
             <li>Legame singolo = 1 legame σ</li>
@@ -122,19 +106,19 @@
     </div>
     <p><strong>Limite della teoria VB:</strong> Non spiega molecole come il metano (CH₄) o l'acqua (H₂O) perché gli orbitali atomici puri (s e p) hanno forme ed energie diverse, quindi i legami dovrebbero essere diversi tra loro, ma sperimentalmente sono identici.</p>
 
-    <h2>3. L'Ibridazione degli Orbitali</h2>
+    </section><section id="sez-3"><h2>3. L'Ibridazione degli Orbitali</h2>
     <p>Per risolvere i limiti della teoria VB, gli orbitali atomici (s e p) si "mescolano" matematicamente per formare nuovi orbitali <strong>ibridi</strong>, tutti equivalenti tra loro in energia e forma.</p>
 
     <div class="table-box">
-        <table>
-            <tr>
-                <th>Ibridazione</th>
-                <th>Orbitali usati</th>
-                <th>Geometria</th>
-                <th>Angolo</th>
-                <th>Esempio</th>
+        <div class="table-wrap"><table>
+            <thead><tr>
+                <th scope="col">Ibridazione</th>
+                <th scope="col">Orbitali usati</th>
+                <th scope="col">Geometria</th>
+                <th scope="col">Angolo</th>
+                <th scope="col">Esempio</th>
             </tr>
-            <tr>
+            </thead><tbody><tr>
                 <td><strong>sp³</strong></td>
                 <td>1 s + 3 p</td>
                 <td>Tetraedrica</td>
@@ -155,42 +139,67 @@
                 <td>180°</td>
                 <td>C₂H₂ (Acetilene)</td>
             </tr>
-        </table>
-    </div>
+        </tbody></table>
+    </div></div>
     <ul>
         <li>Nell'<strong>etilene (sp²)</strong> rimane 1 orbitale p non ibridato, che formerà il legame π (doppio legame).</li>
         <li>Nell'<strong>acetilene (sp)</strong> rimangono 2 orbitali p non ibridati, che formeranno i 2 legami π (triplo legame).</li>
         <li><em>Nota bene:</em> Anche i doppietti solitari (es. in NH₃ e H₂O) occupano orbitali ibridi sp³, causando la distorsione degli angoli (107° e 104.5°).</li>
     </ul>
 
-    <h2>4. Teoria degli Orbitali Molecolari (MO)</h2>
+    </section><section id="sez-4"><h2>4. Teoria degli Orbitali Molecolari (MO)</h2>
     <p>Invece di localizzare gli elettroni tra due atomi (come in VB), la teoria MO li considera delocalizzati su <strong>tutta la molecola</strong>. Si ottengono combinando matematicamente gli orbitali atomici (LCAO).</p>
     <ul>
         <li><strong>Orbitale Legante (σ, π):</strong> Le funzioni d'onda si sommano (interferenza costruttiva). C'è alta densità elettronica tra i nuclei. Energia minore (più stabile).</li>
-        <li><strong>Orbitale Antilegante (σ*, π*):</strong> Le funzioni d'onda si sottraggono (interferenza distruttiva). C'è un <span class="highlight">nodo</span> (densità zero) tra i nuclei. Energia maggiore (instabile).</li>
+        <li><strong>Orbitale Antilegante (σ*, π*):</strong> Le funzioni d'onda si sottraggono (interferenza distruttiva). C'è un <mark>nodo</mark> (densità zero) tra i nuclei. Energia maggiore (instabile).</li>
     </ul>
-    <div class="box">
+    <div class="callout">
         <strong>Ordine di Legame:</strong><br>
-        <span class="highlight">Ordine = (Elettroni leganti - Elettroni antileganti) / 2</span><br>
+        <mark>Ordine = (Elettroni leganti - Elettroni antileganti) / 2</mark><br>
         Un ordine di legame maggiore di zero indica che la molecola è stabile.
     </div>
 
-    <h2>5. Il Paramagnetismo dell'Ossigeno (O₂)</h2>
+    </section><section id="sez-5"><h2>5. Il Paramagnetismo dell'Ossigeno (O₂)</h2>
     <p>La teoria MO riesce a spiegare un fenomeno che le teorie precedenti non spiegavano: l'ossigeno liquido è <strong>paramagnetico</strong> (viene attratto da un magnete).</p>
     <ul>
         <li>Guardando il diagramma MO dell'O₂, gli ultimi due elettroni si dispongono singolarmente (secondo la regola di Hund) nei due orbitali antileganti π*.</li>
-        <li>Questi <span class="highlight">elettroni spaiati</span> generano un campo magnetico, conferendo alla molecola proprietà paramagnetiche.</li>
+        <li>Questi <mark>elettroni spaiati</mark> generano un campo magnetico, conferendo alla molecola proprietà paramagnetiche.</li>
         <li>Nelle molecole biatomiche del secondo periodo c'è anche un fenomeno chiamato <em>mescolamento s-p</em> che inverte l'ordine dei livelli energetici per B₂, C₂, N₂ rispetto a O₂, F₂, Ne₂.</li>
     </ul>
 
-    <h2>6. Il Legame Metallico secondo la Teoria MO</h2>
+    </section><section id="sez-6"><h2>6. Il Legame Metallico secondo la Teoria MO</h2>
     <p>Applicando la teoria MO a un metallo (che ha miliardi di atomi), si ottengono miliardi di orbitali molecolari con livelli energetici così vicini da formare una <strong>banda continua</strong>.</p>
     <ul>
         <li>Gli elettroni sono delocalizzati in questa banda.</li>
         <li>Questo spiega perché i metalli sono ottimi conduttori di elettricità: basta poca energia per far saltare gli elettroni da un livello all'altro all'interno della banda.</li>
     </ul>
 
-</div>
+</section>
 
+      <nav class="pager" aria-label="Navigazione tra le lezioni">
+        <a class="pager__link" href="ppt4.html">
+          <span class="pager__label">← Lezione precedente</span>
+          <span class="pager__title">I Legami Chimici (Parte I)</span>
+        </a>
+        <a class="pager__link pager__link--next" href="ppt6.html">
+          <span class="pager__label">Lezione successiva →</span>
+          <span class="pager__title">Forze Intermolecolari e Passaggi di Stato</span>
+        </a>
+      </nav>
+
+      <footer class="site-footer">
+        <p>Chimica Generale</p>
+        <p><a href="../index.html">Torna all'indice</a></p>
+      </footer>
+    </article>
+  </main>
+
+  <button class="to-top" type="button" data-to-top aria-label="Torna all'inizio della pagina">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../assets/js/ui.js"></script>
 </body>
 </html>

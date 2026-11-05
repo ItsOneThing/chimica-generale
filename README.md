@@ -6,11 +6,17 @@ L'obiettivo di questo progetto è trasformare le classiche slide accademiche in 
 
 ## 📂 Struttura del Progetto
 
-Il progetto è organizzato con un indice principale e una cartella contenente le singole lezioni:
+Il progetto è organizzato con un indice principale, un eserciziario di nomenclatura e una cartella con le singole lezioni. Gli stili e gli script sono condivisi nella cartella `assets/`.
 
 ```text
 .
-├── index.html          # Pagina iniziale con l'indice delle lezioni
+├── index.html          # Indice delle lezioni e degli esercizi
+├── nomenclatura.html   # Eserciziario di nomenclatura
+├── assets/
+│   ├── css/style.css   # Tema condiviso, chiaro e scuro
+│   ├── js/ui.js        # Tema, indice attivo, barra di lettura
+│   ├── js/nomenclatura.js
+│   └── favicon.svg
 └── folder/             # Cartella contenente i riassunti delle lezioni
     ├── ppt2.html       # Teoria Atomica della Materia
     ├── ppt3.html       # Struttura Elettronica
@@ -19,3 +25,19 @@ Il progetto è organizzato con un indice principale e una cartella contenente le
     ├── ppt6.html       # Forze Intermolecolari e Passaggi di Stato
     ├── ppt7.html       # Leggi dei Gas
     └── ppt8.html       # Soluzioni e Proprietà Colligative
+```
+
+## ✨ Interfaccia
+
+- Tema chiaro e scuro, con preferenza di sistema e interruttore manuale.
+- Indice della lezione, navigazione tra le lezioni e barra di avanzamento della lettura.
+- Layout responsive per desktop, tablet e telefono.
+- Eserciziario con 56 formule e soluzioni mostrabili/nascondibili.
+
+## 🚀 Come usare
+
+Apri `index.html` in un browser. Non serve installare nulla né avviare un server: tutte le risorse sono locali.
+
+## 📄 Licenza
+
+Vedi il file [LICENSE](LICENSE).
